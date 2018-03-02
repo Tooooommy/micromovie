@@ -229,6 +229,10 @@ def moviecol(page=None):
     return render_template('home/moviecol.html', page_data=page_data)
 
 
+@home.route('/')
+def re_index():
+    return redirect(url_for('home.index', page=1))
+
 @home.route("/<int:page>/")
 def index(page=None):
     tags = Tag.query.all()
