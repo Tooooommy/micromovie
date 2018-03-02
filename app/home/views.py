@@ -231,7 +231,7 @@ def moviecol(page=None):
 
 @home.route('/')
 def re_index():
-    return redirect(url_for('home.index', page=1))
+    return redirect(url_for('home.index'))
 
 @home.route("/<int:page>/")
 def index(page=None):
